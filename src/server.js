@@ -16,7 +16,7 @@ const PORT = process.env.PORT;
 
 app.use(express.json());
 app.use('/api/users', userRoutes);
-app.use('/api/annonces', adRoutes);
+app.use('/api/ads', adRoutes);
 
 
 app.listen(PORT, () => {

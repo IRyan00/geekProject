@@ -8,6 +8,8 @@ const adSchema = new mongoose.Schema({
     type: { type: String, enum:["don", "vente"], require: true },
     prix: { type: Number, require: true, get: getPrice, set: setPrice },
     idUser: { type: String, require: true },
+    public_id: { type: String, require: true },
+    url: { type: String, require: true },
 },
     {
         timestamps: true
