@@ -94,7 +94,6 @@ blabla
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- CONTRIBUTING -->
 ## Equipe
 
 <a href="https://github.com/IbanL">Iban Letoile</a>
@@ -106,3 +105,8 @@ blabla
 <a href="https://github.com/IRyan00">Ryan Eymas</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Démo
+
+Render - 
