@@ -9,17 +9,22 @@ const connectDB = require('./config/database');
 const dotenv = require('dotenv');
 dotenv.config();
 
+// Routes
 const userRoutes = require('./routes/authRoutes');
 const adRoutes = require('./routes/adRoutes');
+const cartRoutes = require('./routes/cartRoutes');
 
+// PORT
 const PORT = process.env.PORT;
 
+// Middlewares
 app.use(express.json());
 app.use('/api/users', userRoutes);
 app.use('/api/ads', adRoutes);
+app.use('/api/cart', cartRoutes);
 
-
+// Server
 app.listen(PORT, () => {
     connectDB();
-    console.log('Serveur démarré sur http://localhost:'+PORT);
+    console.log(`Serveur démarré sur http://localhost:${PORT}`);
 });
