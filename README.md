@@ -1,7 +1,7 @@
 <a id="readme-top"></a>
 
   <h1 align="center">GeekProject</h1>
-  <h2 align="center">Projet fil rouge TP DWWM Bayonne</h2>
+  <h3 align="center">Projet fil rouge TP DWWM Bayonne</h3>
 
 
 ## A propos de ce projet
@@ -17,8 +17,7 @@ blabla
 
 ### Technologies utilisées
 
-* [![Javascript][Javascript.js]][Javascript-url]
-* [![React][React.js]][React-url]
+* Javascript
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
