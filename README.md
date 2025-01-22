@@ -15,21 +15,21 @@ blabla
 
 
 
-### Technologies utilisées
+## Technologies utilisées
 
 * Javascript
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-### Prérequis
+## Prérequis
 
 * npm :
   ```sh
   npm install npm@latest -g
   ```
 
-### Installation
+## Installation
 
 1. Cloner le répertoire :
    ```sh
