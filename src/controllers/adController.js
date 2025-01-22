@@ -1,13 +1,13 @@
 const Ad = require('../models/Ad');
 const fs = require('fs');
 const { v2: cloudinary } = require('cloudinary');
+require('dotenv').config
 
-
-    cloudinary.config({
-        cloud_name: 'dhbqf3vci',
-        api_key: '748579176519384',
-        api_secret: '2h6wj4pRBpopGI8c14LYA6tW3XY'
-    });
+cloudinary.config({
+    cloud_name: CLOUD_NAME,
+    api_key: API_KEY,
+    api_secret: API_SECRET
+});
 
 exports.getAllAd = async (req, res) => {
     try {
@@ -34,7 +34,7 @@ exports.getOneAd = async (req, res) => {
 };
 // Ajouter
 exports.createAd = async (req, res) => {
-    
+
     try {
         if (!req.file) {
             return res.status(400).json({ error: 'no file uploaded' });

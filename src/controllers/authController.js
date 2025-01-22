@@ -36,9 +36,27 @@ exports.createUser = async (req, res) => {
 
 // Login
 
-
-
-
+exports.login = async (req, res) => {
+	try {
+		const { email, password } = req.body;
+		const user = await User.findOne({ email });
+		if (!user) {
+			return res.status(404).json({ message: 'Email ou mot de passe incorrect' });
+		}
+		const isMatch = await user.comparePassword(password);
+		if (!isMatch) {
+			return res.status(404).json({ message: 'Email ou mot de passe incorrect' });
+		}
+		const token = generateToken(user._id);
+		res.cookie('jwt', token, {
+			httpOnly: true
+		});
+		res.status(200).json({ token });
+	}
+	catch (error) {
+		res.status(500).json({ message: `Erreur lors de la connexion`, error });
+	}
+}
 
 // Logout
 
