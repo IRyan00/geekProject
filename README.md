@@ -1,9 +1,8 @@
-Projet fil rouge TP DWWM Bayonne
-
 <a id="readme-top"></a>
 
 <br />
   <h3 align="center">GeekProject</h3>
+  <p>Projet fil rouge TP DWWM Bayonne</p>
 
 
 ## A propos de ce projet
