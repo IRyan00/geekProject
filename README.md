@@ -1,8 +1,7 @@
 <a id="readme-top"></a>
 
-<br />
-  <h3 align="center">GeekProject</h3>
-  <p>Projet fil rouge TP DWWM Bayonne</p>
+  <h1 align="center">GeekProject</h1>
+  <h2 align="center">Projet fil rouge TP DWWM Bayonne</h2>
 
 
 ## A propos de ce projet
