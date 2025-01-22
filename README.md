@@ -44,6 +44,14 @@ blabla
    npm start
    ```
 
+## Configuration
+
+<p>Créer un fichier `.env` à la racine du projet avec les variables suivantes :</p>
+   ```sh
+  PORT=le_port_sohaité (e.g 3000)
+  MONGO_URI=votre_uri_mongodb
+   ```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
