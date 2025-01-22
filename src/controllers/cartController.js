@@ -21,3 +21,25 @@ exports.addToCart = async (req, res) => {
         );
     }
 };
+
+exports.removeFromCart = async (req, res) => {
+    try {
+        const { id } = req.body;
+        const cart = await Cart.findByIdAndDelete(id);
+        res.status(200).json({ message: 'Suppression réussie' });
+    } catch (error) {
+        res.status(500).json({ message: `Erreur lors de la suppression du panier`, error });
+    }
+}
+
+exports.updateCart = async (req, res) => {
+    try {
+        const { id, idAd } = req.body;
+        const cart = await Cart.findByIdAndUpdate
+            (id, { idAd }, { new: true });
+        res.status(200).json(cart);
+    }
+    catch (error) {
+        res.status(500).json({ message: `Erreur lors de la modification du panier`, error });
+    }
+}
