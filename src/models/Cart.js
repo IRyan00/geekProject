@@ -1,26 +1,24 @@
 const mongoose = require('mongoose');
 
-class Cart {
-	items = [];
-
-	addItem(item) {
-		this.items.push(item);
-	}
-
-	removeItem(item) {
-		const index = this.items.indexOf(item);
-		if (index > -1) {
-			this.items.splice(index, 1);
-		}
-	}
-
-	getTotalItems() {
-		return this.items.length;
-	}
-
-	clearCart() {
-		this.items = [];
-	}
-}
+const Cart = mongoose.Schema(
+	{
+		cartItems: [
+			{
+				product: {
+					titre: { type: String, required: true },
+					description: { type: String, required: true },
+					type: { type: String, enum: ["don", "vente"], require: true },
+					prix: { type: Number, require: true },
+					idUser: { type: String, require: true },
+					public_id: { type: String, require: true },
+					url: { type: String, require: true },
+				},
+				quantity: { type: Number, default: 1 },
+			},
+		],
+		userId: { type: String, required: true },
+	},
+	{ timestamp: true }
+);
 
 module.exports = Cart;
