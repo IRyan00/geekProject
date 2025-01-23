@@ -167,6 +167,8 @@ Créer un fichier `.env` à la racine du projet avec les variables suivantes :
 
 
 ## Equipe
+<center>
+
 | Nom  | GitHub |
 | ------------- | ------------- |
 | Iban Letoile  | https://github.com/IbanL|
@@ -174,6 +176,7 @@ Créer un fichier `.env` à la racine du projet avec les variables suivantes :
 | Thomas Baullard   | https://github.com/TMS-B  |
 | Ryan Eymas | https://github.com/IRyan00   |
 
+</center>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
