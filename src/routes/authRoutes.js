@@ -14,11 +14,19 @@ router.post('/addUser', createUser);
 
 // Route pour la connexion utilisateur
 // Cette route serait utilisée pour authentifier les utilisateurs et fournir un token
+<<<<<<< HEAD
 router.post('/login', login);
+=======
+// router.post('/login', login);
+>>>>>>> refs/remotes/origin/dev
 
 // Route pour la déconnexion
 // Cette route est protégée par le middleware d'authentification
 router.get('/logout', auth, logout);
 
 // Exportation du routeur pour pouvoir l'utiliser dans d'autres fichiers
+<<<<<<< HEAD
 module.exports = router;
+=======
+module.exports = router;
+>>>>>>> refs/remotes/origin/dev

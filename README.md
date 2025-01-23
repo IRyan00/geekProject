@@ -6,6 +6,7 @@
 
 ## A propos de ce projet
 
+<<<<<<< HEAD
 Projet à but éducatif dans le cadre de la formation "TP DWWM" à l'AFEC de Bayonne.
 
 L'objectif est de manipuler la partie back-end d'un projet web. 
@@ -59,6 +60,12 @@ Pour ce faire nous avons créer un mvc*
 ├── .gitignore                  # Fichiers à ignorer par Git
 ├── package.json                # Dépendances et scripts du projet
 └── README.md                   # Documentation du projet
+=======
+blabla
+
+blabla
+blabla
+>>>>>>> refs/remotes/origin/dev
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,4 +126,8 @@ Pour ce faire nous avons créer un mvc*
 
 ## Démo
 
+<<<<<<< HEAD
 Render - 
+=======
+Render - 
+>>>>>>> refs/remotes/origin/dev

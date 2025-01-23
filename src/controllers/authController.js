@@ -1,5 +1,5 @@
-const User = require('../models/User'); // Importation du modèle User pour interagir avec la base de données.
-const JWT = require('jsonwebtoken'); // Importation du module JSON Web Token pour gérer les tokens.
+const User = require('../models/User');
+const JWT = require('jsonwebtoken');
 const bcrypt = require('bcrypt'); // Import de bcrypt pour le hachage des mots de passe
 
 const JWT_SECRET = process.env.JWT_SECRET; // Clé secrète utilisée pour signer les tokens JWT, récupérée des variables d'environnement.

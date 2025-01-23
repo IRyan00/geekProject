@@ -9,9 +9,15 @@ const { v2: cloudinary } = require('cloudinary');
 require('dotenv').config(); // Chargement des variables d'environnement
 
 cloudinary.config({
+<<<<<<< HEAD
     cloud_name: process.env.CLOUD_NAME, // Nom du compte Cloudinary
     api_key: process.env.API_KEY,       // Clé API Cloudinary
     api_secret: process.env.API_SECRET  // Clé secrète API Cloudinary
+=======
+    cloud_name: CLOUD_NAME, // Nom du compte Cloudinary
+    api_key: API_KEY,       // Clé API Cloudinary
+    api_secret: API_SECRET  // Clé secrète API Cloudinary
+>>>>>>> refs/remotes/origin/dev
 });
 
 // Contrôleur pour récupérer toutes les annonces
