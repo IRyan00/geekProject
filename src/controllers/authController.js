@@ -1,5 +1,6 @@
 const User = require('../models/User'); // Importation du modèle User pour interagir avec la base de données.
 const JWT = require('jsonwebtoken'); // Importation du module JSON Web Token pour gérer les tokens.
+const bcrypt = require('bcrypt'); // Import de bcrypt pour le hachage des mots de passe
 
 const JWT_SECRET = process.env.JWT_SECRET; // Clé secrète utilisée pour signer les tokens JWT, récupérée des variables d'environnement.
 
@@ -40,11 +41,12 @@ exports.login = async (req, res) => {
 	try {
 		const { email, password } = req.body; // Extraction des données du corps de la requête.
 		const user = await User.findOne({ email }); // Recherche de l'utilisateur dans la base de données par email.
+
 		if (!user) {
 			// Si l'utilisateur n'existe pas, retourne une erreur 404.
-			return res.status(404).json({ message: 'Email ou mot de passe incorrect' });
+			return res.status(404).json({ message: `Cet utilisateur n'existe pas` });
 		}
-		const isMatch = await user.comparePassword(password); // Vérification du mot de passe.
+		const isMatch = await bcrypt.compare(password, user.password); // Vérification du mot de passe.
 		if (!isMatch) {
 			// Si le mot de passe ne correspond pas, retourne une erreur 404.
 			return res.status(404).json({ message: 'Email ou mot de passe incorrect' });
@@ -65,7 +67,7 @@ exports.logout = async (req, res) => {
 	try {
 		res.clearCookie('jwt'); // Supprime le cookie contenant le token JWT.
 		res.status(200).json({ message: 'Déconnexion réussie' }); // Retourne un message de succès.
-		navigate('/'); // Redirige l'utilisateur vers la page d'accueil (nécessite une implémentation front-end).
+		//navigate('/'); Redirige l'utilisateur vers la page d'accueil (nécessite une implémentation front-end).
 	} catch (error) {
 		// Retourne une erreur 500 avec un message d'erreur en cas de problème.
 		res.status(500).json({ message: `Erreur lors de la déconnexion`, error });

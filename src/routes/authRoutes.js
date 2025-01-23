@@ -14,7 +14,7 @@ router.post('/addUser', createUser);
 
 // Route pour la connexion utilisateur
 // Cette route serait utilisée pour authentifier les utilisateurs et fournir un token
-// router.post('/login', login);
+router.post('/login', login);
 
 // Route pour la déconnexion
 // Cette route est protégée par le middleware d'authentification
