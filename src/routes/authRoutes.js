@@ -6,7 +6,7 @@ const auth = require('../middlewares/authMiddleware'); // Middleware d'authentif
 
 // Route pour récupérer tous les utilisateurs
 // Cette route est protégée par le middleware d'authentification
-router.get('/', auth, getAllUsers);
+router.get('/', getAllUsers);
 
 // Route pour ajouter un nouvel utilisateur
 // Cette route n'est pas protégée, ce qui permet de créer des utilisateurs sans être authentifié

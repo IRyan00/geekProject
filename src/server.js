@@ -2,6 +2,10 @@
 const express = require('express');
 const app = express();
 
+// Cors
+const cors = require('cors')
+app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+
 // DB
 const connectDB = require('./config/database');
 
