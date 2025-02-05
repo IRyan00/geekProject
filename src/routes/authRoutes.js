@@ -2,7 +2,7 @@
 const express = require('express'); // Framework web pour Node.js
 const { getAllUsers, createUser, login, logout } = require('../controllers/authController'); // Importation des contrôleurs pour la gestion des utilisateurs
 const router = express.Router(); // Création d'un routeur Express
-const auth = require('../middlewares/authMiddleware'); // Middleware d'authentification
+const protect = require('../middlewares/authMiddleware');
 
 // Route pour récupérer tous les utilisateurs
 // Cette route est protégée par le middleware d'authentification
@@ -18,7 +18,7 @@ router.post('/login', login);
 
 // Route pour la déconnexion
 // Cette route est protégée par le middleware d'authentification
-router.get('/logout', auth, logout);
+router.get('/logout', protect, logout);
 
 // Exportation du routeur pour pouvoir l'utiliser dans d'autres fichiers
 module.exports = router;

@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
-const Cart = mongoose.Schema(
+const CartSchema = mongoose.Schema(
 	{
 		cartItems: [
 			{
 				product: {
+					product_id: { type: String, require: true },
 					titre: { type: String, required: true },
 					description: { type: String, required: true },
 					type: { type: String, enum: ["don", "vente"], require: true },
@@ -13,7 +14,6 @@ const Cart = mongoose.Schema(
 					public_id: { type: String, require: true },
 					url: { type: String, require: true },
 				},
-				quantity: { type: Number, default: 1 },
 			},
 		],
 		userId: { type: String, required: true },
@@ -21,4 +21,4 @@ const Cart = mongoose.Schema(
 	{ timestamp: true }
 );
 
-module.exports = Cart;
+module.exports = mongoose.model('Cart',CartSchema);

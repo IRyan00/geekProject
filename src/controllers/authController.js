@@ -53,6 +53,7 @@ exports.login = async (req, res) => {
 		}
 		const token = generateToken(user._id); // Génération d'un token JWT pour l'utilisateur.
 		res.cookie('jwt', token, {
+			
 			httpOnly: true, // Le cookie est accessible uniquement via le protocole HTTP (pas d'accès JavaScript).
 		});
 		res.status(200).json({ token }); // Retourne le token avec un code de succès 200.
